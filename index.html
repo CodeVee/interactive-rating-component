@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+  <main class="main">
+    <div id="ratingBlk" class="card card--rating">
+      <div class="star">
+        <img src="images/icon-star.svg" alt="star">
+      </div>
+      <h1 class="card__heading">How did we do?</h1>
+      <p class="card__text">
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <form id="form" class="card__form">
+        <div class="card__radios">
+          <label for="btn-1" class="card__label">
+            <input type="radio" name="rating" id="btn-1" class="card__radio" value="1">
+            <span>1</span>
+          </label>
+          <label for="btn-2" class="card__label">
+            <input type="radio" name="rating" id="btn-2" class="card__radio" value="2">
+            <span>2</span>
+          </label>
+          <label for="btn-3" class="card__label">
+            <input type="radio" name="rating" id="btn-3" class="card__radio" value="3">
+            <span>3</span>
+          </label>
+          <label for="btn-4" class="card__label">
+            <input type="radio" name="rating" id="btn-4" class="card__radio" value="4">
+            <span>4</span>
+          </label>
+          <label for="btn-5" class="card__label">
+            <input type="radio" name="rating" id="btn-5" class="card__radio" value="5">
+            <span>5</span>
+          </label>
+        </div>
+        <button class="card__btn">Submit</button>
+      </form>
+    </div>
+    <div id="thanksBlk" class="card card--thanks card--none">
+      <img src="images/illustration-thank-you.svg" alt="thank-you">
+      <div class="card__selected"><p>You selected <span id="rating-value"></span> out of 5</p></div>
+      <h2 class="card__heading">Thank you!</h2>
+      <p class="card__text">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+$orange: hsla(25, 97%, 53%, 1);
+$dark-gradient: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+
+$font-overpass: 'Overpass', sans-serif;;
+$fw-400: 400;
+$fw-700: 700;
+$fs-10: 10px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$desktop: 1280px;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-overpass;
+}
+
+.main {
+    background: $very-dark-blue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: $dark-gradient;
+    width: 41.2rem;
+    height: 41.6rem;
+    border-radius: 3rem;
+
+    &--rating {
+        padding: 3.2rem 3.9rem 3.2rem 3.2rem; 
+    }
+
+    &--thanks {
+        padding: 4.5rem 4rem 4.5rem 3.2rem;
+        text-align: center;
+    }
+
+    &--none {
+        display: none;
+    }
+
+    &__heading {
+        color: $white;
+        font-weight: $fw-700;
+        font-size: 2.8rem;
+        line-height: 3.545rem;
+        margin: 3rem 0 .7rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        font-weight: $fw-400;
+        color: $light-grey;
+        margin-bottom: 2.4rem;
+    }
+
+    &__radios {
+        margin-bottom: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__label {
+        position: relative;
+        cursor: pointer;
+
+        > span {
+            height: 5.1rem;
+            width: 5.1rem;
+            border-radius: 50%;
+            background: $dark-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            font-weight: $fw-700;
+            color: $medium-grey;
+            
+            &:hover {
+                background: $orange;
+                color: $white;
+            }
+        }
+    }
+
+    &__radio {
+        position: absolute;
+        opacity: 0;
+
+        & + span {
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
+        &:checked + span {
+            background: $medium-grey;
+            color: $white;
+        }
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+        width: 100%;
+        background: $orange;
+        height: 4.5rem;
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: $fw-700;
+        border-radius: 2.25rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        cursor: pointer;
+
+        &:active {
+            background: $white;
+            color: $orange;
+        }
+    }
+
+    &__selected {
+        width: 19.3rem;
+        height: 3.2rem;
+        background: $dark-blue;
+        border-radius: 2.25rem;
+        color: $orange;
+        font-size: 1.5rem;
+        font-weight: $fw-400;
+        line-height: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3.2rem auto 0;
+    }
+
+}
+
+.star {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: $dark-blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: 8.89px;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: 11.04px;
+    }
+    
+    .card {
+        background: $dark-gradient;
+        width: 32.7rem;
+        height: 36rem;
+        border-radius: 1.5rem;
+    
+        &--rating {
+            padding: 2.4rem 2.4rem 3.2rem; 
+        }
+    
+        &--thanks {
+            padding: 3.4rem 2.4rem 3.7rem;
+        }
+    
+        &__heading {
+            font-size: 2.4rem;
+            line-height: 3.038rem;
+            margin: 1.6rem 0 1rem;
+        }
+    
+        &__text {
+            font-size: 1.4rem;
+        }
+    
+        &__radios {
+            margin-bottom: 2.4rem;
+        }
+    
+        &__label {
+            > span {
+                height: 4.2rem;
+                width: 4.2rem;
+                font-size: 1.4rem;
+            }
+        }
+    
+        &__btn {
+            font-size: 1.4rem;
+            letter-spacing: .187rem;
+        }
+    
+        &__selected {
+            width: 16.8rem;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            margin-top: 2.4rem;
+        }
+    
+    }
+    
+    .star {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
