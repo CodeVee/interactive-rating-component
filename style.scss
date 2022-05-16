@@ -3,6 +3,8 @@ $light-grey: hsl(217, 12%, 63%);
 $medium-grey: hsl(216, 12%, 54%);
 $dark-blue: hsl(213, 19%, 18%);
 $very-dark-blue: hsl(216, 12%, 8%);
+$orange: hsla(25, 97%, 53%, 1);
+$dark-gradient: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
 
 $font-overpass: 'Overpass', sans-serif;;
 $fw-400: 400;
@@ -24,6 +26,116 @@ $desktop: 1280px;
 body, html {
     font-size: $fs-10;
     font-family: $font-overpass;
+}
+
+.main {
+    background: $very-dark-blue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: $dark-gradient;
+    width: 41.2rem;
+    height: 41.6rem;
+    border-radius: 3rem;
+
+    &--rating {
+        padding: 3.2rem 3.9rem 3.2rem 3.2rem;
+    }
+
+    &--thanks {
+        padding: 4.5rem 4rem 4.5rem 3.2rem;
+    }
+
+    &__heading {
+        color: $white;
+        font-weight: $fw-700;
+        font-size: 2.8rem;
+        line-height: 3.545rem;
+        margin: 3rem 0 .7rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        font-weight: $fw-400;
+        color: $light-grey;
+        margin-bottom: 2.4rem;
+    }
+
+    &__radios {
+        margin-bottom: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__label {
+        position: relative;
+        cursor: pointer;
+
+        > span {
+            height: 5.1rem;
+            width: 5.1rem;
+            border-radius: 50%;
+            background: $dark-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            font-weight: $fw-700;
+            color: $medium-grey;
+            
+            &:hover {
+                background: $orange;
+                color: $white;
+            }
+        }
+    }
+
+    &__radio {
+        position: absolute;
+        opacity: 0;
+
+        &:checked + span {
+            background: $medium-grey;
+            color: $white;
+        }
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+        width: 100%;
+        background: $orange;
+        height: 4.5rem;
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: $fw-700;
+        border-radius: 2.25rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        cursor: pointer;
+
+        &:active {
+            background: $white;
+            color: $orange;
+        }
+    }
+
+
+}
+
+.star {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: $dark-blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
