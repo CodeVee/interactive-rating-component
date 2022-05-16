@@ -12,7 +12,7 @@
 </head>
 <body>
   <main class="main">
-    <div class="card card--rating">
+    <div id="ratingBlk" class="card card--rating">
       <div class="star">
         <img src="images/icon-star.svg" alt="star">
       </div>
@@ -21,7 +21,7 @@
         Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!
       </p>
-      <form class="card__form">
+      <form id="form" class="card__form">
         <div class="card__radios">
           <label for="btn-1" class="card__label">
             <input type="radio" name="rating" id="btn-1" class="card__radio" value="1">
@@ -47,9 +47,9 @@
         <button class="card__btn">Submit</button>
       </form>
     </div>
-    <div class="card card--thanks card--none">
+    <div id="thanksBlk" class="card card--thanks card--none">
       <img src="images/illustration-thank-you.svg" alt="thank-you">
-      <div class="card__selected"><p>You selected <span id="rating">4</span> out of 5</p></div>
+      <div class="card__selected"><p>You selected <span id="rating-value"></span> out of 5</p></div>
       <h2 class="card__heading">Thank you!</h2>
       <p class="card__text">
         We appreciate you taking the time to give a rating. If you ever need more support, 
@@ -57,5 +57,6 @@
       </p>
     </div>
   </main>
+  <script src="main.js"></script>
 </body>
 </html>
