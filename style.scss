@@ -43,11 +43,16 @@ body, html {
     border-radius: 3rem;
 
     &--rating {
-        padding: 3.2rem 3.9rem 3.2rem 3.2rem;
+        padding: 3.2rem 3.9rem 3.2rem 3.2rem; 
     }
 
     &--thanks {
         padding: 4.5rem 4rem 4.5rem 3.2rem;
+        text-align: center;
+    }
+
+    &--none {
+        display: none;
     }
 
     &__heading {
@@ -99,6 +104,11 @@ body, html {
         position: absolute;
         opacity: 0;
 
+        & + span {
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
         &:checked + span {
             background: $medium-grey;
             color: $white;
@@ -125,6 +135,20 @@ body, html {
         }
     }
 
+    &__selected {
+        width: 19.3rem;
+        height: 3.2rem;
+        background: $dark-blue;
+        border-radius: 2.25rem;
+        color: $orange;
+        font-size: 1.5rem;
+        font-weight: $fw-400;
+        line-height: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3.2rem auto 0;
+    }
 
 }
 
