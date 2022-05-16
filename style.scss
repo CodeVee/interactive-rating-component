@@ -1,0 +1,46 @@
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+$font-overpass: 'Overpass', sans-serif;;
+$fw-400: 400;
+$fw-700: 700;
+$fs-10: 10px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$desktop: 1280px;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-overpass;
+}
+
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: 8.89px;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: 11.04px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
